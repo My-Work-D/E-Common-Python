@@ -405,6 +405,152 @@
      margin-bottom: 30px;
  }
 
+/* Container Styling */
+.section-p1 {
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+.section-p1 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-p1 p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Product Container */
+.pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Product Card */
+.pro {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Hover Effect for Card */
+.pro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.pro img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Description Styling */
+.des {
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Brand Name */
+.des span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Product Name Animation (h5) */
+.des h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.pro:hover .des h5 {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Star Ratings */
+.star {
+    margin: 10px 0;
+}
+
+.star i {
+    color: #fbc02d;
+    margin-right: 2px;
+}
+
+/* Price Animation (h4) */
+.des h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.pro:hover .des h4 {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Shopping Cart Icon */
+.card {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    background-color: #27ae60;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.card i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.pro:hover .card {
+    background-color: #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pro {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
 
 
  /* Single Products */
@@ -472,6 +618,130 @@
  #prodetails .single-pro-details span {
      line-height: 25px;
  }
+/* General Section Styling */
+.section-p1 {
+    padding: 40px;
+    text-align: center;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pro {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 23%;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.pro img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pro:hover img {
+    transform: scale(1.1);
+}
+
+.pro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.des {
+    padding: 20px;
+}
+
+.des span {
+    font-size: 14px;
+    color: #888;
+}
+
+.des h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.star i {
+    color: #f0c040;
+}
+
+.des h4 {
+    color: #f00;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0c040;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.card i {
+    color: #fff;
+}
+
+.card:hover {
+    background-color: #ff7518;
+}
+
+/* Animations */
+.pro {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.pro:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pro:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.pro:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pro {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pro {
+        width: 90%;
+    }
+}
 
 
 /* Reviews Section Styling */
