@@ -472,3 +472,131 @@
  #prodetails .single-pro-details span {
      line-height: 25px;
  }
+
+
+/* Reviews Section Styling */
+#reviews {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+#reviews h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#reviews p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+.review:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.review:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review {
+        width: 80%;
+    }
+}
+
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Dark background for contrast */
+    color: white;           /* White text for readability */
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.footer .text {
+    margin: 10px;
+    flex-basis: 200px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #FFD700; /* Golden headings to stand out */
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
