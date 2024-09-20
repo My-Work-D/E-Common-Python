@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import bcrypt
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='access')
 
 # Configure MySQL
 app.config['MYSQL_HOST'] = 'localhost'
