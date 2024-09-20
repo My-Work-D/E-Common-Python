@@ -194,22 +194,6 @@ body {
 }
 
 
-
-#hero button {
-    background-image: url("img/button.png");
-    background-color: transparent;
-    color: #a28607;
-    border: 0;
-    padding: 14px 80px 14px 65px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
-    background-color: #ee3a08;
-    border-radius: 14px;
-    color: black;
-}
-
 .logo{
     width: 100px;
     height: 40px;
