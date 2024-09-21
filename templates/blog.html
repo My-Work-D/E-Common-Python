@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <style>
+        /* Basic resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: gray; /* Black color for navbar */
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content:left;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Form styling */
+        .blog-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .blog-form h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .blog-form input, .blog-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .blog-form button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: gray; /* Black color for footer */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Other styles remain unchanged */
+        /* ... */
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="../templates/index.html">Home</a></li>
+        <li><a href="../templates/blog.html">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="../templates/card1.html">Category</a></li>
+    </ul>
+</nav>
+
+<!-- Product Grid Section -->
+<div class="product-grid">
+    <!-- Existing product cards here... -->
+</div>
+
+<!-- Blog Form Section -->
+<div class="blog-form">
+    <h2>Share Your Thoughts</h2>
+    <form id="blogForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Write your blog post here..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2024 Product Store. All rights reserved.
+</footer>
+
+<script>
+    // Existing JavaScript remains unchanged...
+    // Add event listener to the blog form
+    document.getElementById('blogForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Thank You!',
+            text: 'Your blog post has been submitted!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+        // Optionally, reset the form after submission
+        document.getElementById('blogForm').reset();
+    });
+
+    // Other JavaScript functions...
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+  /* Basic resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: gray;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product cards grid */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+                /* Flex container for the product card */
+        .pro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px; /* Adjust the width based on your design */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+        }
+
+        /* Image styling */
+        .image-container {
+            width: 50%; /* Adjust the width as needed */
+            padding-left: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .pro:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Product details styling */
+        .details {
+            width: 50%; /* Adjust the width as needed */
+            padding-right: 20px;
+        }
+
+        .des span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .des h5 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .des h4 {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Star rating */
+        .star {
+            color: #f1c40f;
+        }
+
+        /* Form styling */
+        #cartForm {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        #cartForm label {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        #quantity {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        #cartForm button {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #cartForm button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Cart summary */
+        #cartSummary {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        #totalAmount {
+            font-weight: bold;
+            color: #e74c3c;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Animation for total amount */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* Footer styling */
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Date and time display */
+        .date-time {
+            color: white;
+            font-size: 16px;
+            text-align: right;
+            justify-content: right;
+        }
