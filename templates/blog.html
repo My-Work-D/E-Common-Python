@@ -29,7 +29,7 @@
         nav ul {
             list-style-type: none;
             display: flex;
-            justify-content:left;
+            justify-content: left;
             gap: 20px;
         }
 
@@ -84,6 +84,38 @@
             background-color: #2980b9;
         }
 
+        /* Blog section styling */
+        #blog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .blog-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 1 1 300px; /* Responsive flex item */
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-details {
+            padding: 15px;
+        }
+
+        .blog-details h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
         /* Footer styling */
         footer {
             background-color: gray; /* Black color for footer */
@@ -95,8 +127,48 @@
             width: 100%;
         }
 
-        /* Other styles remain unchanged */
-        /* ... */
+         /* Blog section styling */
+    #blog {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px;
+        margin: 20px auto;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    .blog-box {
+        display: flex; /* Horizontal layout */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease; /* Animation effect */
+    }
+
+    .blog-box:hover {
+        transform: scale(1.02); /* Scale up on hover */
+    }
+
+    .blog-img {
+        flex: 0 0 40%; /* Image takes 40% width */
+        overflow: hidden;
+    }
+
+    .blog-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-details {
+        padding: 15px;
+        flex: 1; /* Content takes the remaining space */
+    }
+
+    .blog-details h4 {
+        margin-bottom: 10px;
+        color: #333;
+    }
     </style>
 </head>
 <body>
@@ -116,6 +188,31 @@
     <!-- Existing product cards here... -->
 </div>
 
+<!-- Blog Section -->
+<section id="blog">
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="/access/images/blog/img1.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?</p>
+            <button>CONTINUE READING</button>
+        </div>
+    </div>
+    <div class="blog-box">
+        <div class="blog-details">
+            <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex, quae error accusantium voluptas numquam?</p>
+            <button>CONTINUE READING</button>
+        </div>
+        <div class="blog-img">
+            <img src="/access/images/blog/img2.png" alt="">
+        </div>
+    </div>
+
+</section>
+
 <!-- Blog Form Section -->
 <div class="blog-form">
     <h2>Share Your Thoughts</h2>
@@ -133,8 +230,7 @@
 </footer>
 
 <script>
-    // Existing JavaScript remains unchanged...
-    // Add event listener to the blog form
+    // Event listener for the blog form
     document.getElementById('blogForm').addEventListener('submit', function(event) {
         event.preventDefault();
         Swal.fire({
@@ -143,11 +239,8 @@
             icon: 'success',
             confirmButtonText: 'OK'
         });
-        // Optionally, reset the form after submission
         document.getElementById('blogForm').reset();
     });
-
-    // Other JavaScript functions...
 </script>
 
 </body>
