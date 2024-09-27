@@ -62,6 +62,19 @@ def dashboard():
     else:
         return redirect(url_for('login'))
 
+# Blog Page Route
+@app.route('/blog')
+def blog():
+    if 'email' in session:
+        return render_template('blog.html', email=session['email'])
+    return redirect(url_for('login'))
+
+# Card Page Route
+@app.route('/card')
+def card():
+    if 'email' in session:
+        return render_template('card1.html', email=session['email'])
+    return redirect(url_for('login'))
 # Logout Route
 @app.route('/logout')
 def logout():
